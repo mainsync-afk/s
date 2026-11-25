@@ -2,9 +2,11 @@
  * store.js — собственный плагин-каталог для Lampa
  *
  * Показывает в Settings отдельный пункт «Каталог» и при открытии
- * предъявляет ровно два плагина без категорий:
- *   - Trakt   (https://mainsync-afk.github.io/lampa_trakt_v3/plugin/trakt_v3.js)
- *   - Kinopub (https://mainsync-afk.github.io/lampa_kinopub/kp.js)
+ * предъявляет список плагинов без категорий:
+ *   - Trakt         (https://mainsync-afk.github.io/lampa_trakt_v3/plugin/trakt_v3.js)
+ *   - Trakt (KZuev) (https://mainsync-afk.github.io/trakt_KZuev/trakt_KZuev.js)
+ *   - Kinopub       (https://mainsync-afk.github.io/lampa_kinopub/kp.js)
+ *   - Filmix        (https://lampaplugins.github.io/store/fx.js)
  *
  * Версии подтягиваются из самих плагинов (regex по var VERSION / PLUGIN_VERSION),
  * собирается JSON в формате extensions.json, сериализуется в Blob URL и
@@ -41,6 +43,13 @@
             descr: 'Синхронизация с Trakt.tv',
             link: 'https://mainsync-afk.github.io/lampa_trakt_v3/plugin/trakt_v3.js',
             version_regex: /\bVERSION\s*=\s*['"]([^'"]+)['"]/
+        },
+        {
+            name: 'Trakt (KZuev)',
+            author: '@KZuev',
+            descr: 'Trakt.tv от KZuev — версия с PKCE, без Client Secret',
+            link: 'https://mainsync-afk.github.io/trakt_KZuev/trakt_KZuev.js',
+            version_regex: /\bPLUGIN_VERSION\s*=\s*['"]([^'"]+)['"]/
         },
         {
             name: 'Kinopub',
